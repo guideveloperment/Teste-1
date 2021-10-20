@@ -1,0 +1,326 @@
+algoritmos é a sequencia de dados para se concretizar uma ação, uma sequência de passos, vc usa estruturas de repetição
+estrutura de dados visa duas coisas: organizar e administrar estrutura aos dados, ex: uma lista é estrutura de dados pois ela é organizada de alguma maneira
+sequencia de caracteres chama strings
+estruturas de dados básicas: INT REAL LETRA BOOL são blocos de construção (variáveis e constantes) tem inteiros e números flutuantes
+os dados são armazenados em variáveis e constantes
+estruturas personalizadas vc consegue mapear clientes, produtos,etc...
+workspace é uma pasta e dentro dela tem outra pasta chamada ponto metadata que tem suas preferências, tudo que vc personaliza e armazena dentro do workspace
+main quer dizer principal, escrevendo main e ctrl espaço ele traz o ponto de entrada do programa
+tudo começa a partir de MAIN!!!
+o programa java é organizado em sentenças de código que terminam em ponto e vírgula
+um par de chaves em programa java significa um bloco de códigos {} dentro de um bloco de códigos eu posso ter inúmeras linhas
+um bloco de códigos representa um parágrafo, uma junção de códigos
+vc organiza o seu código em arquivos, pacotes e projetos, dentro do projeto tem o código fonte src
+
+VARIAVEIS E CONSTANTES:
+
+Java é uma linguagem fortemente tipada-> quer dizer que se vc cria uma variável com tipo número vc não pode colocar um texto e vice-versa
+Toda variável e constante tem que ter um identificador
+vc define uma variavel em java com: tipo, nome e valor o sinal de = recebe o valor
+para que eu defina uma variavel com valor fixo e não tenha mudança eu coloco no inicio da variavel o comando "final" lembrando que final é uma constante
+concatenar é juntar as partes
+ponto flutuante é qdo os numeros tem casas decimais
+INFERÊNCIA = vc consegue criar variaveis criando a palavra VAR mas vc nao consegue misturar os tipos de variaveis e constantes
+TIPOS PRIMITIVOS JAVA SÃO 8:
+Tipos numericos: byte = 1 bite short = 2 bytes  int = 4 bites long = 8 bytes 
+Byte armazena 128 até = ou - 127
+Short armazena + ou - 32.767 
+INT = ou - 2 bilhoes
+Long é muito grande o armazenamento
+
+Mais 2 tipos com pontos flutuantes são: Float e Double
+Float armazena 5 bytes e Double armazena 8 bytes
+
+Mais 2 tipos são Char que representa uma letra e Boolean que representa verdadeiro ou falso (false e true)
+int sempre vai numero inteiro ex: 2 e double sempre vai numero quebrado ex: 2.5
+
+Tipo String:
+
+Nono tipo da linguagem é o conjunto de caracteres que é o char que tem tratamento especial 
+String é um objeto imutável
+s.length serve para saber quantos caracteres tem uma string o cumprimento
+função comparação de igualdade chama s.equals
+
+CONSOLE: 
+%d são para se passar valores inteiros
+%d são caracteres especiais que vc passa e em seguida vc passa valores para eles ex: System.out.printf("Megasena:%d %d %d %d %d %d", 1, 2, 3, 4, 5, 6);
+%f mostra uma casa decimal e arredonda ex: System.out.printf("\nSalario: %.1f", 1234.5678);
+
+System.out é a saida do sistema
+System.in é a entrada do sistema
+new é uma palavra reservada do java
+	
+WRAPPER: envolve os tipos primitivos (classes)
+
+JOptionPane é uma classe visual 
+
+OPERADORES:
+unários/binários/ternários 
+
+unário tem apenas 1 operando
+binário tem apenas 2 operando
+ternário tem apenas 3 operando
+
+Há operadores ARITMETICOS/RELACIONAIS/LÓGICOS/ATRIBUIÇÃO
+
+Operadores Lógicos:
+Tabela Verdade
+
+Função Switch e case serve para:
+
+É uma estrutura de decisão, assim como o if/else. Basicamente seu formato é este:
+
+switch(decisao){ case 1: (...) break; case 2: (...) break; default: (...) break; }
+
+No exemplo acima, se o valor da variável decisao fosse 1, ele entraria no bloco do “case 1”, se fosse 2, entraria no bloco do “case 2”, e se não fosse de nenhum dos dois, entraria no bloco do “default”. Você não só pode usar inteiros como também caracteres. Por exemplo:
+
+switch(decisao){ case 'a': (...)
+
+Estruturas de controle:
+laços de repetição, codigos 
+
+WHILE quer dizer: enquanto
+FOR é para repetição determinada
+
+If (...) dentro do parenteses vc tem uma expressao dizendo se é verdadeira ou falsa// sentença de código que termina com; ou tem um bloco de códigos {} o if vai definir se executa ou nao a expressão 
+while (...) sentença; ou {} no while se a expressão for verdadeira (true) ela vai ficar repetindo 
+for (...; ...; ...) dentro do for tem  partes a inicialização da variável, a expressão e a modificação da variavel que pode ser um incremento, decremento, atribuição aditiva, etc... e associada ao for vc pode ter a mesma estrutura do while -> while (...) sentença; ou {} 
+
+CLASSES
+uma classe define um bloco de códigos
+método MAIN tbm define um bloco de códigos
+IF tbm define um bloco de códigos
+
+dentro de uma classe se tem atributos e comportamentos
+atributos são dados pode ter: int, boolean, string, date, produto
+
+comportamentos são os métodos: que tem toda sequencia de passos que faz e executa a ação do programa
+
+membros de uma classe são os atributos e comportamentos
+
+classe define um tipo (estrutura de dados)
+classe representa uma abstração (simplificação)
+a partir de uma classe de cria os objetos a classe é a estrutura de dados e os objetos são os dados
+
+objeto == pode ser chamado de instância
+
+instanciar é criar um objeto, ex: acabei de instanciar 300 objetos produtos
+
+construtor a partir de uma classe cria objetos
+
+Classe:
+há variáveis e constantes
+construtor
+métodos
+classes
+
+membros da classe -> atributos -> variaveis e constantes
+
+método é um comportamento e está relacionado ao algoritmo a uma ação, a classe gera os objetos, que por sua vez possuem atributos e comportamentos
+
+Métodos:
+
+sempre criar com primeira letra minuscula e primeira letra da próxima palavra maiuscula
+
+ex:
+
+void nomeMetodo () {
+
+__________________;
+__________________; 
+__________________;
+
+}
+
+Void -> tipo de retorno
+nomeMetodo -> nome do meu método
+() -> são os parâmetros de entrada
+__________________;
+__________________; => isso é o meu algoritmo
+__________________;
+
+      IDENTIDADE DO MÉTODO 
+tipo |nomeMetodo (tipo,nome,...)|{
+
+// corpo do método
+
+}
+
+Construtores:
+construtor é um método especial que cria novos objetos através de uma classe
+
+ex: Produto p1 = new Produto();
+
+Produto -> classe
+Produto (); -> construtor
+
+construtor tem duas restrições:
+o 1 é o nome da classe e o segundo ele não tem retorno
+
+Diferença entre membros de classe x instância
+
+
+Orientação a Objeto tem 4 pilares e são:
+
+Encapsulamento: É vc colocar algo dentro de uma capsula, colocar algo dentro de um recipiente, a capsula seria o objeto, vc usa por exemplo um computador mas vc nao precisa saber necessariamente como o computador no todo funciona, vc so precisa saber no que mexer e nao os detalhes do objeto
+
+Herança: A herança é um princípio da POO que permite a criação de novas classes a partir de outras previamente criadas. Essas novas classes são chamadas de subclasses, ou classes derivadas; e as classes já existentes, que deram origem às subclasses, são chamadas de superclasses, ou classes base (vc recebe por padrões comportamentos e atributos sem precisar definir isso na sua classe) A palavra EXTENDS permite que uma classe herda de outra classe
+
+Polimorfismo: Polimorfismo significa "muitas formas", é o termo definido em linguagens orientadas a objeto, como por exemplo Java, C# e C++, que permite ao desenvolvedor usar o mesmo elemento de formas diferentes. Polimorfismo denota uma situação na qual um objeto pode se comportar de maneiras diferentes ao receber uma mensagem - Há 2 tipos de Polimorfismo são:
+
+Estático:Sobrecarga - permite que vc possa usar o mesmo método funcionando de 3 formas diferentes e usando funcões com o mesmo nome
+
+Dinâmico:para se ter um Polimorfismo dinâmico precisa ter uma herança, de maneira genérica vc consegue receber objetos instanciados a partir de tipos mais específicos
+
+Abstração: Abstração é a habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes ou acidentais. Em modelagem orientada a objetos, uma classe é uma abstração de entidades existentes no domínio do sistema de software.
+Pode ser entendido como simplificação vc pode trazer algo do mundo real para o sistema 
+
+Modificadores de acesso:
+
+Public - público - no publico qualquer classe do sistema pode acessar o membro publico, todo mundo pode acessar
+
+Protected - protegido - atributo protected é visivel no proprio pacote, na propria classe e transmitido por herança para outro pacote
+
+Private - privado - qdo vc cria um atributo dentro da classe tipo privado ele so pode ser acessado dentro da propria classe, nenhuma outra classe pode acessar esse atributo
+
+Package default - só é acessivel dentro de classes que estão no mesmo pacote
+
+Classe Abstrata: ela pode ter todos os métodos abstratos, sem implementação ou ter todos os métodos concretos, definidos, ou ter um método abstrato e os demais concretos, uma classe abstrata não pode ser instanciada, ela é criada quando se tem herança
+
+Classe Concreta:  significa que todos os métodos tem corpo, estão definidos
+
+Interface: Tem métodos mas nao estão implementados, definidos
+
+Streams:
+
+Método Map: Map é uma interface java que contém uma estrutura de dados que permite trabalhar com uma estrutura de chave e valor 
+uma sequencia de dados, um conjunto de dados, o Map mapeia os dados, o Map transforma os dados conforme vc cria o parâmetro da função, o Map transforma uma stream em outra stream, map faz o mapeamento de um elemento para outro elemento, ele conserva o tamanho dos elementos que foram passados, se foi declarado 10 elementos o map retorna 10 elementos	
+
+Tratamento de Erros:
+2 tipos de erros -> COMPILAÇÃO esse erro não deixa o processo seguir em frente
+2 tipos de erros -> EXECUÇÂO são erros que ocorrem quando o seu programa já foi compilado
+
+Há uma classe chamada THROWALDE que herda 2 estruturas dessa classe que são: Error e Exception 
+
+Error geralmente é lançado em algo que não tem como recuperar 
+Exception é uma exceção a regra, é possível recuperar 
+
+BANCO DE DADOS
+
+o Bancos de dados SQL é dividido em 4 partes
+
+DML: CRUD -> INSERT, SELECT, UPDATE, DELETE
+DDL: CREATE, ALTER E DROP
+DCL: GRANT, DENY, REVOKE
+TCL: ligado ao controle de transações -> Begins Trans, Commit Trans, RollBack
+
+Tipo de Joins:
+entre duas tabelas há o inner que so traz dados que tenham relação de chave primaria que tem relacao com outra tabela que tem chave estrangeira
+ex: em uma tabela tem cidades e outra tabela tem empresas qdo se usa a consulta INNER ele traz os dados relacionados a essas duas tabelas (INTERSEÇAO)
+TIPOS DE JOIN:
+LEFT-> traz o que está do lado esquerdo da tabela
+RIGHT-> traz o que está do lado direito da tabela
+FULL JOIN-> traz todo conteudo da tabela
+OUTER JOIN traz o que não está relacionado na tabela
+
+Função DESC é para descrever uma tabela, os detalhes de como ela foi elaborada
+
+JPA:
+Padroes de persistencia: Há 2 padrões 
+Data Mapper e Active Record
+No Active Record o objeto é o responsável junto com todos os métodos em interagir com a camada de persitência e isso geralmente é feito através de herança
+aqui vc tem uma classe que há funcionalidades desde Upadate, save, where, enfim... e a partir disso vc tem uma herança que tem a classe cliente, produto e vc herda de Active Record para usar as funcionalidades para fazer o padrao persistência 
+
+
+Data Mapper é usado para mapear um objeto com outra tabela, faz o relacionamento mapeia os dados do objeto com os atributos onde vai ser usado, aqui o objeto nao precisa estar necessariamente dentro da tabela, pode estar fora e com esse padrão permite buscar e fazer o mapeamento dos dados com a tabela fazendo assim a persitência dos dados 
+
+ORM: Mapeamento objeto relacional
+O conceito é mapear cada um dos atributos e objetos que representa o modelo da aplicação para fazer um Depara-> confrontar as informações
+
+MODULARIDADE EM JAVA: sistemas de módulo
+vc com esse recurso define quais classes vão ficar visíveis para uso de outras pessoas, vc faz o encapsulamento a proteção das classes para que não se mude e te traga problemas, vc pode arquitetar melhor o seu projeto, vc evita que criem dependências de classes e pacotes uns com os outros a famosa "Dependência cíclica"
+
+HTML -> Linguagem de marcação, a parte estrutural da página, ex: um título, o menu
+CSS -> parte que define o estilo da aplicação, ex: menu da aplicação vai aparecer do lado esquerdo ou lado direito, o design...
+JS(Javascript) -> comportamento
+
+Web service -> serviço dentro da web, comunicação desenvolvida de texto
+Há 2 tipos -> SOAP e o REST
+Dentro do SOAP usa o wsdl, xml, rpc, burográfico
+Dentro do Rest se usa o Json, Http e Simples
+
+JSON: JavaScript Object Notetion -> É um formato textual, que transfere informações entre sistemas
+
+HTTP-> são 4 camadas, uma física, uma de transporte, uma de aplicação, de rede
+protocolo IP (internet)
+protocolo IP
+protocolo HTTP (Hiper text transfer protocolo-> protocolo de transferência de hiper texto) que é o HTML uma linguagem de marcação de hipertexto que faz transferência de arquivos textos
+HTTP tem 8 métodos e o mais usado é o GET que serve para obter informações do servidor
+tem 4 métodos POST/PUT/PATCH/DELETE
+post altera os dados dentro do servidor, os mais usados são post e get 
+
+GET-> obter informações
+POST -> para cadastrar informações
+PUT-> fazer alterações totais, completas
+PATCH -> fazer alterações parciais
+DELETE-> excluir informações 
+OPTIONS-> usado para fazer requisições, retorna como resposta os métodos HTTP quais métodos do HTTP que aquela url suporta
+TRACE e RED
+
+
+MVC-> Model View Controll 
+
+MODEL-> seria o coração da aplicação, teria as regras de negócio, entidades e camadas de acesso a dados
+
+VIEW-> ela é responsável por reinderizar a página como resposta a requisição( páginas Web) trabalha com javascript, css, html, template engine tudo que diz respeito a visualizar a página está vinculado com a view
+
+CONTROLLER-> faz o intermédio entre a VIEW e o MODEL, que coordena o fluxo da aplicação 
+
+Mongo DB-> é um banco baseado em documentos e esse doc é um JSON, o mongo DB tem o database que é um banco de dados(db) dentro tem as collections que são equivalentes as tabelas do banco relacional e dentro das collections vc tem os docs que são equivalentes as tuplas, tabelas do bando de dados relacional, o mongo db é um banco sem schema, vc pode inserir dados numa coleção que não existe, vc consegue fazer vários coisas que no banco relacional não tem como fazer
+No mongoDB não se usa sql ele tem uma própria API
+MONGO DB-> Bancos não relacionais
+NoSql-> not only sql
+são divididos em 4 grandes grupos:
+Chave Valor
+Grafo
+Column
+Documento-> mongo é baseado em doc. e JSON(texto)
+Dentro do bancos de dados há escalonamentos: 
+Vertical-> o vertical vc otimiza o seu banco em uma única máquina e sendo em apenas uma máquina isso tem um limite
+Horizontal-> aqui vc consegue separar os seus dados em múltiplas instancias em máquinas diferentes, distribuir os dados de forma orizontal
+
+ARRAYS E COLEÇÕES(COLLECTIONS)
+
+Array: 2 caracteristicas -> Homogênio e estático
+Array -> tem sempre elementos do mesmo tipo(São homogênios) ex: se vc colocar um int so pode ter elementos do tipo inteiros e não Float ou double e também ele é estático(tamanho fixo) se vc definiu por exemplo com 10 posições nao pode mudar o tamanho, uma vez definido o tamanho x não pode mudar e sim criar outro Array com tamanho diferente
+Array é uma estrutura indexada vc acessa a estrutura dele por um índice
+Zero é sempre o primeiro elemento ex: se vc tem um indice de 1 a 10 começa com 0 e termina com 9 
+
+COLLECTIONS-> é uma estrutura dinâmica vc pode modificar e é heterogênenea vc pode colocar int, double, Float + é melhor ter um padrão homogênea para não dar confusão
+Dentro das collections se tem as estruturas:
+
+SET-> não ordenada(por padrão) 
+não indexada
+não aceita repetição
+
+LIST-> indexada e aceita repetição
+
+MAP-> chave(set)/Valor(list)
+
+QUEUE-> First in/First out(FIFO) 1 que entra e 1 que sai
+
+STACK-> Last in/First out(LIFO) último que sai e 1 a sair
+
+HASCODE E EQUALS-> conceito de igualdade a ideia é usar para comparar os objetos
+hashcode é para comparar de maneira rápida so valor numerico e achando os elementos iguais ele passa para o Equals e faz uma comparação mais rigorosa
+
+'' desse jeito é char (aspas simples é char)
+"" desse jeito é String (aspas duplas é string)
+
+ANOTAÇÕES GIT
+
+1 comando => git remote add origin => link do repositorio
+2 comando => adicionar o arquivo que vai subir pro git => git add .
+3 comando => git commit -n "comentario" => comento o que vou subir
+4 comando => git push -u origin => nome da branch que estou trabalhando 
+

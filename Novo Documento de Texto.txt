@@ -1,0 +1,122 @@
+Escreva a função de ordenação de inserção em uma linguagem de programação.
+Escreva uma função que rearranje um vetor v[0..n-1] de modo que ele fique em ordem estritamente crescente.
+Escreva uma função que receba um inteiro x e um vetor v[0..n-1] de inteiros em ordem crescente e insira x no vetor de modo a manter a ordem crescente.
+Crie uma função que conte quantas iterações ocorrem ao ordenar um vetor.
+Pior caso.  Descreva e analise uma instância de pior caso para o algoritmo de inserção, ou seja, um vetor v[0..n-1] que leva o algoritmo a executar o maior número possível de comparações.
+Melhor caso.  Descreva e analise uma instância de melhor caso para o algoritmo de inserção, ou seja, um vetor v[0..n-1] que leva o algoritmo a executar o menor número possível de comparações.
+Busca binária.  O papel do for interno na função inserção é encontrar o ponto onde v[j] deve ser inserido em v[0..j-1]. Considere fazer isso com uma busca binária. Analise o resultado.
+
+
+
+
+
+5.tem muito mais for por isso é mais lento
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAM 100 // Declara o tamanho do vetor;
+
+void fInsertion_Sort(int *pVetor);
+
+int main()
+{
+    int vVetor[TAM];
+    int vAux;
+
+    srand(time(NULL));
+    for (vAux=0; vAux < TAM; vAux++)
+    {
+        vVetor[vAux] = (rand() % 90) + 10; // Preenche o vetor com valores aleatórios de 10 até 99;
+        printf(" %d,",vVetor[vAux]);
+    }
+
+    fInsertion_Sort(vVetor); // Chama a função de Ordenação;
+
+    printf("\n\n");
+    for (vAux=0; vAux < TAM; vAux++)
+    {
+        printf(" %d,",vVetor[vAux]);
+    }
+
+    printf("\n\n ");
+    system("pause");
+}
+
+void fInsertion_Sort(int *pVetor)
+{
+    int vAux;
+    int vTemp;
+    int vTroca;
+
+    for (vAux=1; vAux < TAM; vAux++) // vAux começa na posição 1 do vetor e vai até a ultima posição;
+    {
+        vTemp = vAux; // vTemp recebe a posição que está passando no "for";
+
+        while (pVetor[vTemp] < pVetor[vTemp-1]) // Enquanto o valor que está passando na posição "vTemp" for menor que a posição "vTemp" menos 1, ocorre a troca;
+        { // Ocorre a troca;
+            vTroca          = pVetor[vTemp];
+            pVetor[vTemp]   = pVetor[vTemp-1];
+            pVetor[vTemp-1] = vTroca;
+            vTemp--; // vTemp decrementa 1;
+
+            if (vTemp == 0) // Quando "vTemp" chegar na posição 0, primeira posição do vetor, o laço while para;
+                break;
+        }
+
+    }
+}
+
+6.
+______________________________________________________________________________________________________________
+
+codigo jadir 
+
+
+import java.sql.DriverManager;
+public class ConnectionFactory {
+	public void getConnection() {
+		try {
+			//qual é o banco e o driver
+			Class.forName("com.mysql.jdbc.Driver");
+			String login = "uniciddb";
+			String senha = "Alfa#01";		
+			String url = "jdbc:mysql://uniciddb.mysql.dbaas.com.br:3306/uniciddb";
+			DriverManager.getConnection(url,login,senha);
+			System.out.println("Conectado ao BD");
+		}
+		catch(Exception e) {
+			// imprime o erro
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		ConnectionFactory db = new ConnectionFactory();
+		db.getConnection();
+	}
+}
+______________________________________________________________________________________________________---
+
+
+
+import java.sql.DriverManager;
+import java.sql.Connection;
+
+public class ConnectionFactory {
+	public static Connection getConnection() throws Exception{
+		try {
+			//qual é o banco e o driver
+			Class.forName("com.mysql.jdbc.Driver");
+			String login = "uniciddb";
+			String senha = "Alfa#01";		
+			String url = "jdbc:mysql://uniciddb.mysql.dbaas.com.br:3306/uniciddb";
+			return DriverManager.getConnection(url,login,senha);
+		}
+		catch(Exception e) {
+			// imprime o erro
+			throw new Exception("Erro "+ e.getMessage());
+		}
+	}
+}
+

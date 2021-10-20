@@ -1,0 +1,384 @@
+package sco.model;
+
+public class Item {
+
+	private Produto produto;
+
+	private Integer quantidade;
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		//if (produto != null)
+			this.produto = produto;
+	}
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		if (quantidade < 0)
+			quantidade = 0;
+		this.quantidade = quantidade;
+	}
+
+}
+===========================================================================================================================
+
+
+package sco.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+import br.com.caelum.vraptor.ioc.Component;
+import br.com.caelum.vraptor.ioc.SessionScoped;
+
+@Component
+@SessionScoped
+public class Carrinho {
+	
+	private List<Item> itens = new ArrayList<Item>();
+	
+	private Double total = 0.0;
+
+	public List<Item> getItens() {
+		return itens;
+	}
+
+	public void setItens(List<Item> itens) {
+		this.itens = itens;
+	}
+
+	public Double getTotal() {
+		return total;
+	}
+
+	public void setTotal(Double total) {
+		this.total = total;
+	}
+
+	public void adiciona(Item item) {
+		if( item != null ){
+			itens.add(item);
+			total += item.getProduto().getPreco() * item.getQuantidade();
+		}
+	}
+	
+	public Integer getTotalDeItens(){
+		return itens.size();
+	}
+	//alterada
+	public void remove(int indiceItem) {
+		if(indiceItem < itens.size() && indiceItem >= 0){
+			Item removido = itens.remove(indiceItem);
+			total -= removido.getProduto().getPreco() * removido.getQuantidade();
+		}
+	}
+	//verificar
+	public boolean getItem(Produto produto){
+		if(produto != null)
+			for(Item item : itens){
+				if(item.getProduto().getId() == produto.getId()) return true;
+			}
+		return false;
+	}
+	
+	
+
+}
+
+============================================================================================================
+
+package sco.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Usuario {
+	
+	@Id
+	private String login;
+	
+	private String senha;
+	
+	private String nome;
+
+	public Usuario() {	}
+	
+
+	public Usuario(String login, String senha, String nome) {
+		super();
+		this.login = login;
+		this.senha = senha;
+		this.nome = nome;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	
+}
+===============================================================================================================
+
+import javax.persistence.*;
+import org.hibernate.validator.Length;
+import org.hibernate.validator.Min;
+import org.hibernate.validator.NotNull;
+
+@Entity
+public class Produto {
+	
+	@Id @GeneratedValue
+	private Long id;
+	
+	@NotNull
+	@Length(min=3)
+	private String nome;
+	
+	@NotNull
+	@Length(max=40)
+	private String descricao;
+	
+	@NotNull
+	@Min(0)
+	private Double preco;
+	
+	public Produto(){
+		
+	}
+	public Produto(Long id, String nome,String descricao,Double preco){
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+		this.preco = preco;
+	}
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		if(id < 0) id = 0L;
+			this.id = id;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public Double getPreco() {
+		return preco;
+	}
+	public void setPreco(Double preco) {
+		if(preco < 0.0) preco = 0.0;
+			this.preco = preco;
+	}
+	
+	
+
+}
+
+==============================================================================================
+
+
+package sco.model;
+
+import br.com.caelum.vraptor.ioc.Component;
+import br.com.caelum.vraptor.ioc.SessionScoped;
+
+@Component
+@SessionScoped
+public class UsuarioWeb {
+	
+	private Usuario logado;
+
+	public void login(Usuario usuario){
+		this.logado = usuario;
+	}
+	
+	public String getNome(){
+		return logado.getNome();
+	}
+	
+	public boolean isLogado(){
+		return logado != null;
+	}
+
+	public void logout() {
+		this.logado = null;
+		
+	}
+	public String getUsuarioLogado(){
+		return logado.getLogin();
+	}
+
+	
+	
+}
+
+===========================================================================
+
+
+
+
+
+/*
+ * Criado para o projeto interdiciplinar II da universidade anhembi morumbi no ano de 2016
+ * 
+ * Autores:   
+ * Henrique Alves Conzatti
+ * Ra: 20686577
+ * Egerton Maciel
+ * Ra: 20709502
+ * Michael Arcângelo
+ * Ra: 20714553
+ * Rafael Sommer
+ * Ra: 20709887
+ *
+ */
+
+package projeto.classesSistema;
+
+// importa pacote para trabalhar com Matrizes dinamicamente
+import java.util.ArrayList;
+
+import static javax.swing.JOptionPane.showMessageDialog;
+
+
+public class Campeonato {
+
+    // Armazena nome do campeonato
+    private String nomeCampeonato;
+    //Armazena lista de partidas do campeonato
+    private ArrayList<Partida> listaPartidas = new ArrayList<Partida>();
+    //Armazena lista de times que participam do campeonato
+    private ArrayList<Time> listaTimes = new ArrayList<Time>();
+    //Armazena Placar de times
+    private ArrayList<Placar> listaPlacar = new ArrayList<Placar>();
+   
+    
+    
+    //construtor que inicia com alguns dados
+    public Campeonato(){
+        //seta nome do campeonato
+        setNomeCampeonato("Campeonato Brasileiro");
+        
+        //times pré cadastradas do sistema
+        addTime(new Time("São Paulo", "São Paulo"));
+        addTime(new Time("Palmeiras", "São Paulo"));
+        addTime(new Time("Corinthians","São Paulo"));
+        addTime(new Time("Chapecó", "Chapecó"));
+        addTime(new Time("Criciúma", "Criciúma"));
+        
+        //partidas pré cadastradas no sistema
+        addPartida(new Partida(getTimeMandante("Criciúma"), getTimeVisitante("Palmeiras"), 7, 1));
+        addPartida(new Partida(getTimeMandante("São Paulo"), getTimeVisitante("Corinthians"), 5, 3));
+        addPartida(new Partida(getTimeMandante("São Paulo"), getTimeVisitante("Palmeiras"), 4, 2));
+        addPartida(new Partida(getTimeMandante("Corinthians"), getTimeVisitante("São Paulo"), 2, 1));
+        addPartida(new Partida(getTimeMandante("Chapecó"), getTimeVisitante("São Paulo"), 2, 2));
+    }
+    //aplicando conceito de encapsulamento
+        
+    public String getNomeCampeonato() {
+        return nomeCampeonato;
+    }
+
+    public void setNomeCampeonato(String nomeCampeonato) {
+        this.nomeCampeonato = nomeCampeonato;
+    }
+
+    public ArrayList<Partida> getListaPartidas() {
+        return listaPartidas;
+    }
+
+    public void addPartida(Partida partida) {
+        this.listaPartidas.add(partida);
+        
+        //seleciona placar do time mandante e incrementa gols marcados e sofridos com gols da partida já contabiliza pontuação       
+        getPlacarTime(partida.getTimeMandante()).setPartida(partida.getGolMandante(), partida.getGolVisitante());
+        
+        //seleciona placar do time visitante e incrementa gols marcados e sofridos com gols da partida já contabiliza pontuação      
+        getPlacarTime(partida.getTimeVisitante()).setPartida( partida.getGolVisitante(),partida.getGolMandante());
+        
+    }
+
+    public ArrayList<Time> getListaTimes() {
+        return listaTimes;
+    }
+
+    public void addTime(Time time) {
+        this.listaTimes.add(time);
+        //isto adiciona time na lista de placar também
+        this.listaPlacar.add(new Placar(time));
+    }
+    
+    public Time getTimeMandante(String time){
+        //for each que percorre a lista e verifica se nome do time é igual a string passada como parametro
+        for (Time IteratorTime: getListaTimes()) {
+            if(IteratorTime.getNomeTime().equals(time)){
+                return IteratorTime;
+            }
+           
+        }
+        //Caso não encontrar time retorna menssagem de erro
+        showMessageDialog(null, "Erro: Time mandante não encontrato");   
+    
+        return null;   
+    }
+      public Time getTimeVisitante(String time){
+        //for each que percorre a lista e verifica se nome do time é igual a string passada como parametro
+        for (Time IteratorTime: getListaTimes()) {
+            if(IteratorTime.getNomeTime().equals(time)){
+                return IteratorTime;
+            }
+           
+        }
+        //Caso não encontrar time retorna menssagem de erro
+        showMessageDialog(null, "Erro: Time visitante não encontrato");   
+    
+        return null;   
+    }
+      public Placar getPlacarTime(Time timePlacar){
+         //itera sobre lista de placar e verifica se time passado por paramentro é igual a time no placar 
+          for(Placar placar: listaPlacar){
+              if(placar.getTime().equals(timePlacar)){
+                  return placar;
+              }              
+          }          
+          return null;
+      }
+}

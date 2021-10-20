@@ -1,0 +1,8 @@
+Algo realmente está bem errado. Ele provavelmente não está encontrando a biblioteca padrao do Java no seu projeto (a JRE). Pois Object tem sim construtor () :)
+
+Vai no seu projeto no eclipse, da um clique da direita e escolha build path e depois configurar build path
+
+Vai em Libraries e escolha adicionar Library. Escolha JRE Sustem Library e va para o proximo, seleciona, dá finish.
+
+Isso já deveria estar configurado, mas ja passei por isso algumas vezes.
+

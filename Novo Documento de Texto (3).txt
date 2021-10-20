@@ -1,0 +1,327 @@
+	Scanner entrada = new Scanner(System.in);
+		
+		System.out.print("Informe o número:");
+		double num1 = entrada.nextDouble();
+		
+		System.out.print("Informe o número:");
+		double num2 = entrada.nextDouble();
+		
+		System.out.print("Informe a operação:");
+		String op = entrada.next();
+		
+		//Lógica
+		double resultado = "+".equals(op) ? num1 + num2: 0;
+		resultado = "-".equals(op) ? num1 - num2: resultado;
+		resultado ="*".equals(op) ? num1 * num2: resultado;
+		resultado ="/".equals(op) ? num1 / num2: resultado;
+		resultado ="%".equals(op) ? num1  % num2: resultado;
+		
+		System.out.printf("%.2f %s %.2f = %.2f", num1, op, num2, resultado);
+		
+			
+		entrada.close();
+
+------------------------------------------------------------------------------------
+
+
+
+void main(void) {
+	
+	int * vetor;
+	int i;
+	
+	printf ("O tamanho utilizado foi %d\n",vetor);
+	
+	int y;
+	y = 20000*sizeof(int);
+	vetor=malloc (20000*sizeof(int));
+	for(i=0; i<=100;i++)
+	{
+		vetor[i] = rand() % 100;
+	}
+	
+	printf("Tamanho utilizado foi de %d\n", y);
+	
+	
+	free (vetor);
+
+}
+
+
+
+
+__________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String nome;
+	double preco;
+	static double desconto;
+	
+	Produto (){
+		
+	}
+	
+	Produto (String nomeInicial, double precoInicial, 
+			double descontoInicial) {
+		nome=nomeInicial;
+		preco=precoInicial;
+		desconto=descontoInicial;
+	}
+			
+	double precoComDesconto() {
+		return preco * (1 - desconto);
+	}
+	
+	double precoComDesconto(double descontoDoGerente ) {
+		return preco * (1 - desconto + descontoDoGerente);
+			
+		}
+	}
+
+___________________________________________________________________________________________________
+
+
+public static void main(String[] args) {
+		
+		Produto p1 = new Produto();
+		p1.nome = "Notebook";
+		p1.preco = 4356.89;
+		p1.desconto = 0.25;
+		
+		Produto p2 = new Produto();
+		p2.nome = "Caneta Preta";
+		p2.preco = 12.56;
+		p2.desconto = 0.29;
+		
+		System.out.println(p1.nome);
+		System.out.println(p2.nome);
+		
+		double precoFinal1 = p1.precoComDesconto();
+		double precoFinal2 = p2.precoComDesconto();
+		double mediaCarrinho = (precoFinal1 + precoFinal2) / 2;
+		
+		System.out.printf("Média do carrinho = R$%.2f.", mediaCarrinho);
+		
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Perfil de Interesse</h1>
+<form method="POST" action="pesquisar.php">
+	Pesquisar o nome do livro:<input type="text" name="pesquisar"placeholder="Digite o nome do livro">
+	<input type="submit" value="BUSCAR"place>
+	
+	<form method="POST" action="pesquisar.php">
+	Pesquisar o nome do autor:<input type="text" name="pesquisar"placeholder="Digite o nome do autor">
+	<input type="submit" value="BUSCAR"place>
+	
+	<form method="POST" action="pesquisar.php">
+	Pesquisar por tema:<input type="text" name="pesquisar"placeholder="Digite o tema escolhido">
+	<input type="submit" value="BUSCAR"place>
+	
+	<form method="POST" action="pesquisar.php">
+	Pesquisar por data de publicação:<input type="text" name="pesquisar"placeholder="Digite a data de publicação">
+	<input type="submit" value="BUSCAR"place>
+	
+	<form method="POST" action="pesquisar.php">
+	Pesquisar por categoria:<input type="text" name="pesquisar"placeholder="Digite a categoria desejada">
+	<input type="submit" value="BUSCAR"place>
+	
+	<form method="POST" action="pesquisar.php">
+	Pesquisar por quantidade de cópias:<input type="text" name="pesquisar"placeholder="Digite a quantidade">
+	<input type="submit" value="BUSCAR"place>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_________________________________________________________________________________________________________________________________-
+
+
+
+<html lang="pt-br">
+ <head>
+	<meta charset="UTF-8">
+	<title>Layout com PHP</title>
+	
+	<!--CSS -->
+	<...100 linhas />
+	</head>
+	<body>
+	
+	<div class="principal">
+	<header></header>
+	<nav>
+		<?php
+		
+		$menu = ['HOME', 'DADOS PESSOAIS', 'PERFIL DE INTERESSE', 'EMPRÉSTIMOS'];
+		$links = ['index.php','dadospessoais.php', 'perfildeinteresse', 'empréstimos.php'];
+		
+		print "<ul>";
+		
+		for($c=0;$c<4;$c++)
+		print "<a href='$links[$c]'><li>$menu[$c]</li></a>";
+		
+		print "</ul>";
+						
+	
+		?>
+
+
+___________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$menu = ['HOME', 'DADOS PESSOAIS', 'PERFIL DE INTERESSE', 'EMPRÉSTIMO'];
+		$links = ['index.php', 'dadospessoais.php', 'perfildeinteresse.php', 'empréstimo.php'];
+
+		print "<ul>";
+		
+		for($c=0;$c<6;$c++)
+		print "<a href='$links[$c]'><li$menu[$c]</li></a>";
+
+					
+		print "</ul>";	
+
+
+
+
+
+______________________________________________________________________________________________________________________________
+
+
+
+
+html lang="pt-br">
+     <head>
+		<meta charset="utf-8">
+		<title>PERFIL DE INTERESSE</title>
+		<link real="stylesheet"href="_css/style.css">
+		</head>
+		<body>
+			<section>
+					<form action=""method="post">
+					
+						<select class="campos" name="opcao">
+							<option value="1">memoria de bras cubas</option>
+							<option value="2">namoro blindado</option>
+						</select><br><br>
+						
+						<input class="btn" type="submit">
+						
+						</html>
+
+
+
+
+
+<input class="btn" type="submit">
+
+
+
+

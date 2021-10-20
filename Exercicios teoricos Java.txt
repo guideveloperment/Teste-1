@@ -1,0 +1,174 @@
+Exercícios Teóricos – Lista 1
+
+
+
+1) O Java foi criado a partir de quais linguagens de programação? 
+ 
+R: Da linguagem C
+
+2) Quais as principais razões que levaram os engenheiros da Sun a desenvolver uma nova linguagem de programação? 
+ 
+R: Não ficar dependente da plataforma, poder rodar em pequenos equipamentos e linguagem oak(carvalho)
+ 
+ 
+ 3) Por que um sistema escrito em Java pode rodar em qualquer plataforma? 
+ 
+R: A linguagem Java é independente de plataforma. Isto significa que o desenvolvedor não terá que se preocupar com particularidades do sistema operacional ou de hardware, focando o seu esforço no código em si. Mas o que isto realmente significa? 
+A maioria das linguagens é preciso gerar uma versão para cada plataforma que se deseja utilizar, exigindo em muitos casos, alterações também no código fonte. Em Java o mesmo programa pode ser executado em diferentes plataformas.
+ 
+
+
+4) Marque com “X” na alternativa correta.Para rodar uma aplicação Java, por mais simples que seja, é necessário possuir uma Java Virtual Machine.  
+(  X ) Verdadeiro   (   ) Falso 
+ 
+ 
+5) Qual o principal papel do JCP(Java Community Process)? 
+ 
+ R:
+ 
+ 
+6) Por quem é formado o JCP? 
+ 
+ R:
+ 
+ 
+ 
+ 
+7) Marque “V” para verdadeiro ou “F” para falso.
+
+a. (   ) A Sun, como dona da tecnologia poderá mudar os rumos do Java a qualquer tempo.
+b. (   ) Para a Sun fazer uma alteração no Java será necessário se submeter ao JCP. 
+c. (   ) O JCP é o responsável por defender os interesses da indústria da comunidade Java e da Sun. 
+ 
+ 
+8) Como está estruturada a plataforma Java? 
+ 
+ R:
+
+  
+9) O que é Java?  
+
+R: É uma Linguagem de programação Orientada a objetos, portável entre diferentes plataformas e sistemas operacionais. 
+ 
+1. Todos os programas Java são compilados e interpretados; 
+2. O compilador transforma o programa em bytecodes independentes de plataforma;
+3.  O interpretador testa e executa os bytecodes
+4. Cada interpretador é uma implementação da JVM - Java Virtual Machine; 
+
+
+10)  Marque com um “X” na alternativa correta. 
+ 
+ É possível compilar um código Java para uma plataforma específica?  (   ) Verdadeiro   (   ) Falso 
+
+
+ 
+ 
+11)  Quais as principais características do Java? 
+ 
+ R:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+12)  Qual a função do Garbage Collector? 
+ 
+ 
+ R:
+ 
+ 
+   
+ 
+13)  Quais são as três tecnologias Java para desenvolvimento de aplicativos? 
+
+R:
+
+
+14)  O Java é compilado ou interpretado? 
+ 
+ 
+ R:  
+ 
+ 
+15)  Para que serve a Java Virtual Machine? 
+
+R: 
+
+
+Exercícios Teóricos – Lista 2 
+
+
+
+1) Quais são as convenções estabelecidas para a declaração de classes, métodos e variáveis? 
+ 
+ R:  
+ 
+ 
+ 
+ 
+2) Como inserimos comentários em um código Java? 
+ 
+ R:  
+ 
+ 
+ 
+3)  Um dos principais motivos que contribuíram para o desenvolvimento da linguagem Java foi: 
+ 
+a. (   ) O nome da linguagem.
+b. (   ) O desenvolvimento da Internet. 
+c. (   ) A linguagem ser relativamente simples.
+d. (   ) O desempenho da linguagem em termos de velocidade. 
+ 
+ 
+4)  Por que o aspecto da utilização do Java em multiplataforma é muito importante para os programadores? 
+
+R:
+
+
+
+5)  Qual das características seguintes não diz respeito a linguagem Java: 
+
+a. (   ) Pode ser executada em qualquer computador, independente de existir uma máquina virtual java instalada. 
+b. (   ) É uma linguagem compilada e interpretada.
+c. (   ) O desempenho dos aplicativos escritos em Java, com relação à velocidade de execução, é inferior à maioria das linguagens de programação. 
+d. (   ) É uma linguagem com um bom nível de segurança. 
+
+
+ 
+6)  A seqüência de desenvolvimento de um programa em Java é: 
+
+a. (   ) Compilação, digitação e execução. 
+b. (   ) Digitação, execução e compilação. 
+c. (   ) Digitação, compilação e execução. 
+d. (   ) Digitação, execução e testes de funcionamento. 
+
+
+
+ 
+7)  Qual a principal característica que distingue a plataforma Java das demais existentes? 
+ 
+ R: 
+
+ 
+ 
+8)  Para a linguagem Java, as variáveis PATH e CLASSPATH correspondem a: 
+
+a. (  ) Variáveis usadas em um programa Java.
+b. (  ) Uma variável de ambiente e um caminho para a execução dos programas Java. 
+c. (  ) Um caminho para encontrar as classes e um caminho para encontrar os aplicativos da linguagem Java.
+d. (  ) Um caminho para encontrar os aplicativos e um caminho para encontrar as classes da linguagem Java. 
+ 
+
+9)  Qual a diferença entre uma variável do tipo primitivo e uma variável do tipo reference? 
+ 
+R: 
+ 
+ 
+ 
+10)  Quais são os tipos primitivos da linguagem Java? 
+ 
+ R:
+
+
